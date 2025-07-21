@@ -1,0 +1,12 @@
+# venv
+.venv/
+
+# Byte-compiled / Cache
+__pycache__/
+*.py[cod]
+
+# VSCode settings
+.vscode/
+
+# test data
+testdata/
