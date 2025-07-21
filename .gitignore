@@ -4,6 +4,9 @@
 # Byte-compiled / Cache
 __pycache__/
 *.py[cod]
+.pytest_cache
 
 # VSCode settings
 .vscode/
+
+data/processed/*
