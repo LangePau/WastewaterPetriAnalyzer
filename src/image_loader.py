@@ -1,8 +1,8 @@
-# src/image_loader.py
-
 import cv2
+import numpy as np
 from pathlib import Path
 from typing import List, Tuple
+
 
 def get_image_paths(
     folder: Path,
@@ -25,7 +25,7 @@ def get_image_paths(
     return sorted(paths)
 
 
-def load_images_from_folder(folder_path: str) -> Tuple[List["numpy.ndarray"], List[Path]]:
+def load_images_from_folder(folder_path: str) -> Tuple[List["np.ndarray"], List[Path]]:
     """
     Load all images from `folder_path` into memory (non-recursive).
     Returns a tuple (images, paths).
@@ -52,11 +52,12 @@ def load_images_from_folder(folder_path: str) -> Tuple[List["numpy.ndarray"], Li
 
 """
 TESTING
+
 if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Load all test images from a folder (non-recursive) and report count."
+        description="Load all test images from a folder and report count."
     )
     parser.add_argument(
         "--input_folder", "-i",
