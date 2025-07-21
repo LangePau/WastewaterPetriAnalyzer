@@ -6,7 +6,7 @@ from typing import List, Tuple
 
 def get_image_paths(
     folder: Path,
-    extensions: Tuple[str, ...] = (".png", ".jpg", ".jpeg", ".tif")
+    extensions: Tuple[str, ...] = (".png", ".jpg", ".jpeg")
 ) -> List[Path]:
     """
     Collect all file paths in `folder` matching the given extensions (case-insensitive)
