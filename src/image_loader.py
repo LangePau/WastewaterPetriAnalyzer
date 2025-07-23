@@ -9,7 +9,7 @@ def get_image_paths(
     extensions: Tuple[str, ...] = (".png", ".jpg", ".jpeg")
 ) -> List[Path]:
     """
-    Collect all file paths in `folder` matching the given extensions (case-insensitive)
+    Collect all file paths in `folder` matching the given extensions
     """
     if not folder.exists():
         raise FileNotFoundError(f"Folder not found: {folder.resolve()}")
@@ -24,8 +24,8 @@ def get_image_paths(
 
 def load_images_from_folder(folder_path: str) -> Tuple[List["np.ndarray"], List[Path]]:
     """
-    Load all images from `folder_path` into memory (non-recursive).
-    Returns a tuple (images, paths).
+    Load all images from `folder_path` into memory
+    Returns a tuple (images, paths)
     """
     folder = Path(folder_path)
     image_paths = get_image_paths(folder)
